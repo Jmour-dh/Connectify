@@ -1,13 +1,13 @@
 import React from "react";
-import videoMP4 from "../../../assets/videos/video1.mp4";
-import styles from "./BackgroundVideo.module.scss";
+import videoMP4 from "../../assets/videos/video1.mp4";
+import styles from "./BackgroundVideo.module.scss"; // Assurez-vous d'avoir le bon chemin d'importation
 
-const BackgroundVideoComponent = () => {
+function BackgroundVideo() {
   return (
-    <div className={styles.backVideo}>
+    <>
+<div className={styles.backVideo}>
     <div className={styles.content}>
           <h1>Connectify</h1>
-          {/* Ajoutez le reste du contenu souhaité sous la vidéo */}
         </div>
       <video
         playsInline
@@ -20,7 +20,11 @@ const BackgroundVideoComponent = () => {
         {/* Ajoutez des sources supplémentaires pour d'autres formats vidéo, si nécessaire */}
       </video>
     </div>
+    
+    </>
+    
   );
-};
+}
 
-export default BackgroundVideoComponent;
+export default BackgroundVideo;
+

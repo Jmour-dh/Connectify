@@ -1,5 +1,10 @@
 .header {
   padding: 10px 20px;
+  
+  z-index: 999;
+  top: 0;
+  left: 0;
+ width: 100%;
   .logo {
     font-family: var(--font-family-2);
     color: var(--yellow);

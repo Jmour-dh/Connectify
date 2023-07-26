@@ -4,6 +4,7 @@ import Bienvenue from "./components/Bienvenue/Bienvenue";
 import Actualite from "./components/Actualite/Actualite";
 import Nous from "./components/Nous/Nous";
 import Contacter from "./components/Contacter/Contacter";
+import Newsletter from "./components/Newsletter/Newsletter";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <Actualite />
       <Nous/>
       <Contacter/>
+      <Newsletter/>
     </>
   );
 }

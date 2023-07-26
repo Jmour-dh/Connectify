@@ -5,26 +5,22 @@ import styles from "./BackgroundVideo.module.scss"; // Assurez-vous d'avoir le b
 function BackgroundVideo() {
   return (
     <>
-<div className={styles.backVideo}>
-    <div className={styles.content}>
+      <div className={styles.backVideo}>
+        <div className={styles.content}>
           <h1>Connectify</h1>
         </div>
-      <video
-        playsInline
-        autoPlay
-        muted
-        loop
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      >
-        <source src={videoMP4} type="video/mp4" />
-        {/* Ajoutez des sources supplémentaires pour d'autres formats vidéo, si nécessaire */}
-      </video>
-    </div>
-    
+        <video
+          playsInline
+          autoPlay
+          muted
+          loop
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        >
+          <source src={videoMP4} type="video/mp4" />
+        </video>
+      </div>
     </>
-    
   );
 }
 
 export default BackgroundVideo;
-

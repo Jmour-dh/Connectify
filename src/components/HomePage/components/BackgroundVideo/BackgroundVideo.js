@@ -1,5 +1,5 @@
 import React from "react";
-import videoMP4 from "../../assets/videos/video1.mp4";
+import videoMP4 from "../../../../assets/videos/video1.mp4";
 import styles from "./BackgroundVideo.module.scss"; // Assurez-vous d'avoir le bon chemin d'importation
 
 function BackgroundVideo() {

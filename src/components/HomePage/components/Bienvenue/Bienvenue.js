@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import videoBienv from "../../assets/videos/video1.mp4";
+import videoBienv from "../../../../assets/videos/video1.mp4";
 import styles from "./Bienvenue.module.scss"; // Assurez-vous d'avoir le bon chemin d'importation
 
 const translations = {

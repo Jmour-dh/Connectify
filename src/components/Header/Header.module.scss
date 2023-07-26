@@ -11,9 +11,8 @@
   a {
     font-size: 20px;
     font-family: var(--font-family-1);
-    color: var(--white);
     &:hover {
-      color: var(--yellow);
+      color: var(--gris);
     }
   }
 }

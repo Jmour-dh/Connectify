@@ -1,21 +1,24 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 function Header() {
   return (
     <header className={`${styles.header} d-flex flex-row align-items-center`}>
       <div className="flex-fill">
-        <a href="#" className={styles.logo}>Connectify</a>
+        <span className={styles.logo}>Connectify</span>
       </div>
 
       <ul className="d-flex ">
         <li className="mr-20">
-          <a href="#">Accueil</a>
+          <NavLink className={({isActive}) => (isActive ? "active": "")} end to="/">Accueil</NavLink>
         </li>
-        <li className="mr-20">
-          <a href="#">Connexion</a>
+        <li className= {`({isActive}) => (isActive ? "active": "") mr-20`}>
+          <NavLink to="/signin">Connexion</NavLink>
         </li>
-        <li className="mr-20">
-          <a href="#"className="btn btn-primary" >Inscription</a>
+        <li className={`({isActive}) => (isActive ? "active": "") mr-20`}>
+          <NavLink to="/signup" className={`({isActive}) => (isActive ? "active": "") btn btn-primary`}>
+            Inscription
+          </NavLink>
         </li>
       </ul>
     </header>

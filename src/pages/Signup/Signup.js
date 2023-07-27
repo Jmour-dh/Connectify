@@ -50,6 +50,17 @@ function Signup() {
                 placeholder="Entrez votre mail..."
               />
             </div>
+            <div className="mb-10 d-flex flex-column">
+              <label htmlFor="imgProfile" className="mb-10">
+                Image du profil :
+              </label>
+              <input
+                id="imgProfile"
+                type="text"
+                name="imgProfile"
+                placeholder="Entrez l'url pour votre image..."
+              />
+            </div>
             <div className={`${styles.gender} d-flex py-20 `}>
               <label htmlFor="gender">Genre :</label>
               <div className="d-flex mr-20">

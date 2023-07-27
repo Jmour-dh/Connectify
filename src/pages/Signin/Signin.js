@@ -38,15 +38,17 @@ function Signin() {
             <div className="d-flex justify-content-center ">
               <button className="btn btn-secondary m-20">Se Connecter</button>
             </div>
-           
           </form>
         </div>
         <div className="p-30">
-        <p>Pas de compte ? <NavLink className={styles.linkIns} to="/signup">Inscrivez-vous</NavLink></p>
-           
-          </div>
+          <p>
+            Pas de compte ?{" "}
+            <NavLink className={styles.linkIns} to="/signup">
+              Inscrivez-vous
+            </NavLink>
+          </p>
+        </div>
       </div>
-      
     </div>
   );
 }

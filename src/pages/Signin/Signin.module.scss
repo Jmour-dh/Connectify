@@ -55,6 +55,10 @@
   width: 100%;
 }
 
+p {
+  font-family: var(--font-family-1);
+}
+
 .linkIns {
   cursor: pointer;
   text-decoration: underline;

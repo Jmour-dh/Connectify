@@ -1,12 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import { AuthContext } from "../../context";
 import { useContext } from "react";
 
 function Header() {
   const { user, signout } = useContext(AuthContext);
+
+  const location = useLocation();
+  const getHeaderClassName = () => {
+    if (location.pathname === "/profile") {
+      return styles.headerProfile; // Apply different styles for the "Profile" page
+    } else {
+      return styles.headerDefault; // Apply default styles for other pages
+    }
+  };
   return (
-    <header className={`${styles.header} d-flex flex-row align-items-center`}>
+    <header className={`${getHeaderClassName()} d-flex flex-row align-items-center`}>
       <div className="flex-fill">
         <span className={styles.logo}>Connectify</span>
       </div>
@@ -15,7 +24,7 @@ function Header() {
           <li className="mr-20">
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "")}
-              to="profile"
+              to="/profile"
             >
               Profil
             </NavLink>

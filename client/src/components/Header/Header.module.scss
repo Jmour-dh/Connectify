@@ -1,7 +1,28 @@
-.header {
+.headerDefault {
   padding: 10px 20px;
   z-index: 1;
   width: 100%;
+  background-color: transparent;
+  .logo {
+    font-family: var(--font-family-2);
+    color: var(--yellow);
+    font-size: 40px;
+  }
+
+  a {
+    font-size: 20px;
+    font-family: var(--font-family-1);
+    &:hover {
+      color: var(--gris);
+    }
+  }
+}
+
+.headerProfile {
+  padding: 10px 20px;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--secondry);
   .logo {
     font-family: var(--font-family-2);
     color: var(--yellow);

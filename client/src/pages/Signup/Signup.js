@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { createUser } from '../../apis/users';
+import { createUser } from "../../apis/users";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
@@ -215,6 +215,11 @@ function Signup() {
                 <p className="form-error">{errors.confirmPassword.message}</p>
               )}
             </div>
+            {errors.generic && (
+              <div className="mb-10">
+                <p className="form-error">{errors.generic.message}</p>
+              </div>
+            )}
             <div className="d-flex justify-content-center ">
               <button
                 disabled={isSubmitting}

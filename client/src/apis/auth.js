@@ -1,10 +1,10 @@
-const API_AUTH = '/api/auth';
+const API_AUTH = "/api/auth";
 
 export async function signin(credentials) {
   const response = await fetch(API_AUTH, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(credentials),
   });
@@ -15,7 +15,7 @@ export async function signin(credentials) {
     if (body) {
       throw body;
     } else {
-      throw new Error('Oops une erreur est survenue');
+      throw new Error("Oops une erreur est survenue");
     }
   }
 }
@@ -27,6 +27,6 @@ export async function getCurrentUser() {
 
 export async function signout() {
   await fetch(API_AUTH, {
-    method: 'DELETE',
+    method: "DELETE",
   });
 }

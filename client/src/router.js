@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
         element: <Signup />,
       },
       {
-        path: 'profile',
+        path: '/profile',
         element: (
           <ProtectedRoute>
             <Profile />

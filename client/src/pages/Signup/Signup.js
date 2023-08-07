@@ -84,26 +84,24 @@ function Signup() {
         <div className={`${styles.content} d-flex `}>
           <form onSubmit={submit} className={`${styles.form} p-20`}>
             <div className="mb-10 d-flex flex-row justify-content-between">
-              <div className="mb-10 d-flex flex-column ">
-                <label htmlFor="name" className={`${styles.input_1} mb-10`}>
-                  Nom :
-                </label>
+              <div className="mb-10 d-flex flex-column  ">
+                <label htmlFor="name">Nom :</label>
                 <input
                   id="name"
                   type="text"
                   name="name"
                   placeholder="Entrez votre nom..."
                   {...register("name")}
+                  className={`${styles.input_1}  mb-10`}
                 />
                 {errors.name && (
                   <p className="form-error">{errors.name.message}</p>
                 )}
               </div>
               <div className="mb-10 d-flex flex-column">
-                <label htmlFor="lName" className={`${styles.input_1} mb-10`}>
-                  Prénom :
-                </label>
+                <label htmlFor="lName">Prénom :</label>
                 <input
+                  className={`${styles.input_1}  mb-10`}
                   id="lName"
                   type="text"
                   name="lName"

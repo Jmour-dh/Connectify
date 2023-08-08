@@ -2,24 +2,24 @@ import React from "react";
 import styles from "./Filter.module.scss";
 import { NavLink } from "react-router-dom";
 
-function Filter() {
+function Filter({ onFilterChange }) {
   return (
     <div className={styles.filter}>
       <ul>
         <li>
-          <NavLink>ALL</NavLink>
+          <NavLink onClick={() => onFilterChange("ALL")}>ALL</NavLink>
         </li>
         <li>
-          <NavLink>Walls</NavLink>
+          <NavLink onClick={() => onFilterChange("Walls")}>Walls</NavLink>
         </li>
         <li>
-          <NavLink>Gallery</NavLink>
+          <NavLink onClick={() => onFilterChange("Gallery")}>Gallery</NavLink>
         </li>
         <li>
-          <NavLink>Video</NavLink>
+          <NavLink onClick={() => onFilterChange("Video")}>Video</NavLink>
         </li>
         <li>
-          <NavLink>Music</NavLink>
+          <NavLink onClick={() => onFilterChange("Music")}>Music</NavLink>
         </li>
       </ul>
     </div>

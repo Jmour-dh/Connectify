@@ -1,33 +1,21 @@
-import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import styles from "./Header.module.scss";
-import { AuthContext } from "../../context";
+import React from "react";
+import styles from "./HeaderMenu.module.scss";
+import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../../../context/AuthContext";
 import { useContext } from "react";
-
-import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
-
-function Header() {
+import logoIcon from "../../../../assets/icons/favicon.ico";
+function HeaderMenu() {
   const { user, signout } = useContext(AuthContext);
-  const location = useLocation();
-  
-  const getHeaderClassName = () => {
-    if (location.pathname === "/profile") {
-      return styles.headerProfile; // Apply different styles for the "Profile" page
-    } else {
-      return styles.headerDefault; // Apply default styles for other pages
-    }
-  };
 
-  const [showMenu, setShowMenu] = useState(false);
   return (
-    <header
-      className={`${getHeaderClassName()} d-flex flex-row align-items-center`}
-    >
-      <div className="flex-fill">
-        <span className={styles.logo}>Connectify</span>
-      </div>
+    <>
       {user ? (
-        <ul className={`${styles.headerList} d-flex `}>
+        <ul
+          className={`${styles.MenuContainer} d-flex flex-column align-items-center card p-20`}
+        >
+          <li>
+            <img className={styles.ico} src={logoIcon} alt="logo" />
+          </li>
           <li className="mr-20">
             <NavLink
               className={({ isActive }) => (isActive ? "Linkactive" : "")}
@@ -49,7 +37,12 @@ function Header() {
           </li>
         </ul>
       ) : (
-        <ul className={`${styles.headerList} d-flex `}>
+        <ul
+          className={`${styles.MenuContainer} d-flex flex-column align-items-center card p-20`}
+        >
+          <li>
+            <img className={styles.ico} src={logoIcon} alt="logo" />
+          </li>
           <li className="mr-20">
             <NavLink
               className={({ isActive }) => (isActive ? "Linkactive" : "")}
@@ -65,24 +58,16 @@ function Header() {
           <li className={`({isActive}) => (isActive ? "Linkactive": "") mr-20`}>
             <NavLink
               to="/signup"
-              className={`({isActive}) => (isActive ? "Linkactive": "") btn btn-primary`}
+              className={`({isActive}) => (isActive ? "Linkactive": "") `}
             >
               Inscription
             </NavLink>
           </li>
         </ul>
       )}
-      <i
-        onClick={() => setShowMenu(true)}
-        className={`fa-solid fa-bars ${styles.headerXs}`}
-      ></i>
-      {showMenu && (
-        <>
-          <div onClick={() => setShowMenu(false)} className="calc"></div>
-          <HeaderMenu />
-        </>
-      )}
-    </header>
+      ;
+    </>
   );
 }
-export default Header;
+
+export default HeaderMenu;

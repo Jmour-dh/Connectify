@@ -1,3 +1,5 @@
+@use '../../assets/styles/mixins' as mixin;
+
 .headerDefault {
   padding: 10px 20px;
   z-index: 1;
@@ -35,5 +37,27 @@
     &:hover {
       color: var(--gris);
     }
+  }
+}
+
+i {
+  color: var(--white);
+}
+
+.headerList {
+  @include mixin.xs {
+    display: none;
+  }
+}
+
+.headerXs {
+  display: none !important;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include mixin.xs {
+    display: block !important;
   }
 }

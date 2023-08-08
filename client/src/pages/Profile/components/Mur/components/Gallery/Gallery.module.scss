@@ -1,0 +1,23 @@
+h2 {
+  font-size: 2rem;
+  color: var(--yellow);
+  font-family: var(--font-family-3);
+}
+
+.gallery {
+  width: 80%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  .imgs {
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

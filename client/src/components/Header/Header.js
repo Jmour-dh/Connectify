@@ -23,7 +23,7 @@ function Header() {
         <ul className="d-flex ">
           <li className="mr-20">
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
+              className={({ isActive }) => (isActive ? "Linkactive" : "")}
               to="/profile"
             >
               Profil
@@ -31,13 +31,13 @@ function Header() {
           </li>
           <li className="mr-20">
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to="#"
+              className={({ isActive }) => (isActive ? "Linkactive" : "")}
+              to="/contact"
             >
               Contact
             </NavLink>
           </li>
-          <li className={`({isActive}) => (isActive ? "active": "") mr-20`}>
+          <li className= "mr-20">
             <NavLink onClick={() => signout()}>Déconnexion</NavLink>
           </li>
         </ul>
@@ -45,20 +45,20 @@ function Header() {
         <ul className="d-flex ">
           <li className="mr-20">
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
+              className={({ isActive }) => (isActive ? "Linkactive" : "")}
               end
               to="/"
             >
               Accueil
             </NavLink>
           </li>
-          <li className={`({isActive}) => (isActive ? "active": "") mr-20`}>
+          <li className={`({isActive}) => (isActive ? "Linkactive": "") mr-20`}>
             <NavLink to="/signin">Connexion</NavLink>
           </li>
-          <li className={`({isActive}) => (isActive ? "active": "") mr-20`}>
+          <li className={`({isActive}) => (isActive ? "Linkactive": "") mr-20`}>
             <NavLink
               to="/signup"
-              className={`({isActive}) => (isActive ? "active": "") btn btn-primary`}
+              className={`({isActive}) => (isActive ? "Linkactive": "") btn btn-primary`}
             >
               Inscription
             </NavLink>

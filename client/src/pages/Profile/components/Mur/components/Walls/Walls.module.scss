@@ -1,0 +1,28 @@
+h2 {
+  font-size: 2rem;
+  color: var(--yellow);
+  font-family: var(--font-family-3);
+}
+
+.status {
+  width: 80%;
+  height: 500px;
+  background-color: #d9d9d9;
+}
+
+.add {
+  width: 80%;
+  height: 100px;
+  background-color: var(--secondry);
+  input {
+    width: 70%;
+  }
+
+  i {
+    color: var(--white);
+    font-size: 40px;
+    &:hover {
+      color: var(--gray);
+    }
+  }
+}

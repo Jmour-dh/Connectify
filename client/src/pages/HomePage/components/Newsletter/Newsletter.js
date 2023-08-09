@@ -9,11 +9,11 @@ function Newsletter() {
         <div className={styles.backVideo}>
           <div className={`${styles.letter}`}>
             <div className="d-flex flex-column align-items-center justify-content-center">
-            <div className="d-flex flex-column align-items-center ">
+            <div className="d-flex flex-column align-items-center  ">
             <h2>Newsletter</h2>
             <p>Inscrivez-vous à notre newsletter pour rester informé(e) et connecté(e) avec Connectify !</p>
             </div>
-            <form action="" className={`${styles.form} d-flex flex-column  p-20`}>
+            <form action="" className={`${styles.form} d-flex flex-column `}>
             <div className="mb-10 d-flex flex-column align-items-center">
               <input className={styles.input}
                 type="text"

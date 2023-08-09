@@ -83,8 +83,8 @@ function Signup() {
         </div>
         <div className={`${styles.content} d-flex `}>
           <form onSubmit={submit} className={`${styles.form} p-20`}>
-            <div className="mb-10 d-flex flex-row justify-content-between">
-              <div className="mb-10 d-flex flex-column  ">
+            <div className=" d-flex flex-row justify-content-between">
+              <div className=" d-flex flex-column  ">
                 <label htmlFor="name">Nom :</label>
                 <input
                   id="name"
@@ -92,16 +92,16 @@ function Signup() {
                   name="name"
                   placeholder="Entrez votre nom..."
                   {...register("name")}
-                  className={`${styles.input_1}  mb-10`}
+                  className={`${styles.input_1} `}
                 />
                 {errors.name && (
                   <p className="form-error">{errors.name.message}</p>
                 )}
               </div>
-              <div className="mb-10 d-flex flex-column">
+              <div className=" d-flex flex-column">
                 <label htmlFor="lName">Prénom :</label>
                 <input
-                  className={`${styles.input_1}  mb-10`}
+                  className={`${styles.input_1}  `}
                   id="lName"
                   type="text"
                   name="lName"
@@ -113,7 +113,7 @@ function Signup() {
                 )}
               </div>
             </div>
-            <div className="mb-10 d-flex flex-column">
+            <div className=" d-flex flex-column">
               <label htmlFor="email" className="mb-10">
                 Email :
               </label>
@@ -143,9 +143,9 @@ function Signup() {
                 <p className="form-error">{errors.imgProfile.message}</p>
               )}
             </div>
-            <div className={`${styles.gender} d-flex py-20 `}>
+            <div className={`${styles.gender} d-flex align-items-center `}>
               <label htmlFor="gender">Genre :</label>
-              <div className="d-flex mr-20">
+              <div className="d-flex align-items-center ">
                 <div>
                   <input
                     className={`${styles.input_3} mr-15 ml-20`}
@@ -161,7 +161,7 @@ function Signup() {
                   </label>
                 </div>
               </div>
-              <div className="d-flex ">
+              <div className="d-flex align-items-center ">
                 <div>
                   <input
                     className={`${styles.input_3} mr-15`}
@@ -178,12 +178,12 @@ function Signup() {
                 </div>
               </div>
             </div>
-            <div className="mb-10">
+            <div >
               {errors.gender && (
                 <p className="form-error">{errors.gender.message}</p>
               )}
             </div>
-            <div className="mb-10 d-flex flex-column">
+            <div className=" d-flex flex-column">
               <label htmlFor="password">Mot de passe :</label>
               <input
                 className={styles.input_2}
@@ -197,8 +197,8 @@ function Signup() {
                 <p className="form-error">{errors.password.message}</p>
               )}
             </div>
-            <div className="mb-10 d-flex flex-column">
-              <label htmlFor="confirmPassword" className="mb-10">
+            <div className=" d-flex flex-column">
+              <label htmlFor="confirmPassword" >
                 Vérification de mot de passe :
               </label>
               <input
@@ -221,7 +221,7 @@ function Signup() {
             <div className="d-flex justify-content-center ">
               <button
                 disabled={isSubmitting}
-                className="btn btn-secondary m-20"
+                className="btn btn-secondary m-10"
               >
                 Valider
               </button>

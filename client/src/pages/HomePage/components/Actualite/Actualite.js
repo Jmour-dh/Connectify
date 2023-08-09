@@ -4,12 +4,12 @@ import imgAc from "../../../../assets/images/actualite.jpg";
 
 function Actualite() {
   return (
-    <div className={`${styles.actualite} d-flex`}>
+    <div className={`${styles.actualite}`}>
       <div className={styles.image}>
-        <img src={imgAc} alt="actualite" />
+      <img src={imgAc} alt="actualite" />
       </div>
-      <div className={styles.act}>
-        <div
+      <div className={styles.actu}>
+      <div
           className={`${styles.content} d-flex flex-column align-items-center`}
         >
           <div className={styles.title}>

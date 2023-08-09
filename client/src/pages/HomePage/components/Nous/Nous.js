@@ -4,7 +4,7 @@ import imgQsn from "../../../../assets/images/qsn.jpg";
 
 function Nous() {
   return (
-    <div className={`${styles.nous} d-flex`}>
+    <div className={`${styles.nous} `}>
       <div className={styles.image}>
         <img src={imgQsn} alt="qui sommes nous" />
       </div>

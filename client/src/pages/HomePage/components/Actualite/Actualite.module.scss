@@ -8,78 +8,77 @@
   @include mixin.xs {
     flex-direction: column-reverse;
   }
-}
-
-.image {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  @include mixin.xs {
-    width: 100%;
-    height: 50%;
-    position: relative;
-  }
-  img {
-    width: 100%;
+  .image {
+    width: 50%;
     height: 100%;
-    object-fit: cover;
-  }
-}
-
-.actu {
-  width: 50%;
-  height: 100%;
-  background-color: var(--secondry);
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: var(--secondry);
-  z-index: 2; /* Set z-index to bring the content div in front of the image */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @include mixin.xs {
-    position: relative;
-    width: 100%;
-    height: 50%;
-  }
-}
-
-.title {
-  color: var(--yellow);
-  font-size: 3rem;
-  font-family: var(--font-family-3);
-  margin-bottom: 50px;
-  top: 50px;
-  @include mixin.xs {
-    margin-bottom: 20px;
-    margin-top: 0px;
-    h2 {
-      font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include mixin.xs {
+      width: 100%;
+      height: 50%;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
-}
 
-.para {
-  font-size: 1.5rem;
-  color: var(--white);
-  text-align: center;
-  font-family: var(--font-family-1);
+  .actu {
+    width: 50%;
+    height: 100%;
+    background-color: var(--secondry);
+    position: absolute;
+    top: 0;
+    right: 0;
 
-  @include mixin.xs {
-    p {
-      font-size: 1rem;
+    z-index: 2; /* Set z-index to bring the content div in front of the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mixin.xs {
+      position: relative;
+      width: 100%;
+      height: 50%;
     }
   }
-}
 
-.content {
-  width: 70%;
-  @include mixin.xs {
-    width: 90%;
+  .title {
+    color: var(--yellow);
+    font-size: 3rem;
+    font-family: var(--font-family-3);
+    margin-bottom: 50px;
+    top: 50px;
+    @include mixin.xs {
+      margin-bottom: 20px;
+      margin-top: 0px;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .para {
+    font-size: 1.5rem;
+    color: var(--white);
+    text-align: center;
+    font-family: var(--font-family-1);
+
+    @include mixin.xs {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .content {
+    width: 70%;
+    @include mixin.xs {
+      width: 90%;
+    }
   }
 }

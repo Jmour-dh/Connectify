@@ -4,51 +4,56 @@
   position: relative;
   width: 100%;
   height: 100vh; /* Adjust the height as needed */
-}
-.backVideo {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.content {
-  /* Ajoutez des styles supplémentaires pour le contenu sous la vidéo si nécessaire */
-  padding: 20px;
-  color: var(--primary);
-  font-family: var(--font-family-3);
-  text-align: center;
-  position: absolute;
-}
-
-.backVideo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 0, 0.5); /* Yellow color with 60% opacity */
-}
-
-/* Styles pour le texte h1 */
-span {
-  font-size: 7rem; /* Ajustez la taille du texte selon vos besoins */
-  @include mixin.xs {
-    font-size: 2.5rem;
+  .backVideo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content {
+    /* Ajoutez des styles supplémentaires pour le contenu sous la vidéo si nécessaire */
+    padding: 20px;
+    color: var(--primary);
+    font-family: var(--font-family-3);
+    text-align: center;
+    position: absolute;
+  }
 
-.comment {
-  color: var(--white);
-  font-size: 1.8rem;
-  @include mixin.xs {
-    font-size: 1.5rem;
+  .backVideo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      255,
+      255,
+      0,
+      0.4
+    ); /* Yellow color with 60% opacity */
+  }
+
+  /* Styles pour le texte h1 */
+  span {
+    font-size: 7rem; /* Ajustez la taille du texte selon vos besoins */
+    @include mixin.xs {
+      font-size: 2.5rem;
+    }
+  }
+
+  .comment {
+    color: var(--white);
+    font-size: 1.8rem;
+    @include mixin.xs {
+      font-size: 1.5rem;
+    }
   }
 }

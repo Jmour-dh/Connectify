@@ -4,79 +4,75 @@
   position: relative;
   width: 100%;
   height: 100vh; /* Adjust the height as needed */
-}
+  .letter {
+    position: absolute;
+    height: 45%;
+    width: 50%;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 20px;
+    z-index: 1;
+    @include mixin.xs {
+      width: 90%;
+      height: 40%;
+      p {
+        text-align: center;
+      }
+    }
+  }
 
-.letter {
-  position: absolute;
-  height: 45%;
-  width: 50%;
-  background-color: black;
-  opacity: 0.8;
-  border-radius: 20px;
-  z-index: 1;
-  @include mixin.xs {
-   width: 90%;
-   height: 40%;
-  p {
+  .backVideo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black); /* Yellow color with 60% opacity */
+    opacity: 0.6;
+  }
+  .backVideo {
+    width: 100%;
+    height: 100vh;
+    display: flex; /* Utilisez Flexbox pour centrer le contenu */
+    align-items: center; /* Centrez verticalement le contenu */
+    justify-content: center;
+  }
+
+  .content {
+    /* Ajoutez des styles supplémentaires pour le contenu sous la vidéo si nécessaire */
+    padding: 20px;
+    color: var(--yellow);
+    font-family: var(--font-family-2);
     text-align: center;
+    position: absolute;
   }
+
+  /* Styles pour le texte h1 */
+  h2 {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    color: var(--yellow);
+    font-family: var(--font-family-3);
+    @include mixin.xs {
+      font-size: 1.5rem;
+    }
   }
-}
 
-.backVideo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--black); /* Yellow color with 60% opacity */
-  opacity: 0.6;
-}
-.backVideo {
-  
-  width: 100%;
-  height: 100vh;
-  display: flex; /* Utilisez Flexbox pour centrer le contenu */
-  align-items: center; /* Centrez verticalement le contenu */
-  justify-content: center;
-  
-}
-
-.content {
-  /* Ajoutez des styles supplémentaires pour le contenu sous la vidéo si nécessaire */
-  padding: 20px;
-  color: var(--yellow);
-  font-family: var(--font-family-2);
-  text-align: center;
-  position: absolute;
-  
-}
-
-/* Styles pour le texte h1 */
-h2 {
-  margin-top: 30px;
-  font-size: 2.5rem; 
-  color: var(--yellow);
-  font-family: var(--font-family-3);
-  @include mixin.xs {
+  p {
+    margin: 20px 10px;
+    color: var(--white);
     font-size: 1.5rem;
   }
-}
 
-p {
-  margin: 20px 10px;
-  color: var(--white);
-  font-size: 1.5rem;
-}
+  .form {
+    width: 100%;
+  }
 
-.form {
-  width: 100%;
-}
-
-.input {
-  width: 80%;
-  @include mixin.xs {
-    width: 95%;
+  .input {
+    width: 80%;
+    @include mixin.xs {
+      width: 95%;
+    }
   }
 }

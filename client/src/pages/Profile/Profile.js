@@ -7,7 +7,7 @@ function Profile() {
   return (
     <>
       <Info />
-      <div className={`${styles.profile} d-flex justify-content-between p-20 `}>
+      <div className={`${styles.profile}  p-20 `}>
         <div className={styles.murRight}>
           <Mur />
         </div>

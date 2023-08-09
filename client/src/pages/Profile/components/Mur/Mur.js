@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import styles from './Mur.module.scss'
 import Filter from "../Filter/Filter";
 import Walls from "./components/Walls/Walls";
 import Gallery from "./components/Gallery/Gallery";
@@ -13,7 +13,7 @@ function Mur() {
     setActiveFilter(filter);
   };
   return (
-    <div className="d-flex" >
+    <div className={styles.userPro} >
       <Filter onFilterChange={handleFilterChange} />
       <div className="flex-grow-1">
         {(activeFilter === "ALL" || activeFilter === "Walls") && (

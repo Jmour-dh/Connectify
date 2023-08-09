@@ -11,7 +11,7 @@ function MusicProfile() {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center ">
       <h2 className="text-align-center py-20 ">Music</h2>
-        <div className={`${styles.music} d-flex mb-10`}>
+        <div className={`${styles.music}  mb-10`}>
           <div className={styles.imgMusic}>
             <img src={Imgmusic1} alt="Imgmusic1" />
           </div>

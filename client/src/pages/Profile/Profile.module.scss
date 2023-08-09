@@ -1,8 +1,12 @@
+@use "../../assets/styles/mixins" as mixin;
+
 .profile {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-  .murRight{
+
+  .murRight {
     width: 100%;
   }
 }
-

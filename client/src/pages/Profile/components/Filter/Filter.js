@@ -5,23 +5,13 @@ import { NavLink } from "react-router-dom";
 function Filter({ onFilterChange }) {
   return (
     <div className={styles.filter}>
-      <ul>
-        <li>
-          <NavLink onClick={() => onFilterChange("ALL")}>ALL</NavLink>
-        </li>
-        <li>
-          <NavLink onClick={() => onFilterChange("Walls")}>Walls</NavLink>
-        </li>
-        <li>
-          <NavLink onClick={() => onFilterChange("Gallery")}>Gallery</NavLink>
-        </li>
-        <li>
-          <NavLink onClick={() => onFilterChange("Video")}>Video</NavLink>
-        </li>
-        <li>
-          <NavLink onClick={() => onFilterChange("Music")}>Music</NavLink>
-        </li>
-      </ul>
+      <div className={styles.filterList}>
+    <NavLink onClick={() => onFilterChange("ALL")}>ALL</NavLink>
+    <NavLink onClick={() => onFilterChange("Walls")}>Walls</NavLink>
+    <NavLink onClick={() => onFilterChange("Gallery")}>Gallery</NavLink>
+    <NavLink onClick={() => onFilterChange("Video")}>Video</NavLink>
+    <NavLink onClick={() => onFilterChange("Music")}>Music</NavLink>
+  </div>
     </div>
   );
 }

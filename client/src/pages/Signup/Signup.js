@@ -7,7 +7,6 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { createUser } from "../../apis/users";
 import { useNavigate } from "react-router-dom";
-
 function Signup() {
   const navigate = useNavigate();
 

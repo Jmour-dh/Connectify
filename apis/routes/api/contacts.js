@@ -13,6 +13,7 @@ router.post("/", async (req, res) => {
     res.json(contacts);
   } catch (err) {
     console.log(err);
+    res.status(400).json("Oops une erreur est survenue");
   }
 });
 

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const contactSchema = mongoose.Schema({
-  email:{ type: String, unique: true },
+  email:String,
   sujet: String,
   msg: String,
 });

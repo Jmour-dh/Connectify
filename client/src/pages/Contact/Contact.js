@@ -71,7 +71,7 @@ function Contact() {
               </label>
               <input
                 id="email"
-                type="text"
+                type="email"
                 name="email"
                 placeholder="Entrez votre mail..."
                 {...register("email")}

@@ -4,7 +4,7 @@ import imgContact from "../../assets/images/contact.jpg";
 
 function Contact() {
   return (
-    <div className={`${styles.contact} d-flex justify-content-center`}>
+    <div className={`${styles.contact}`}>
       <div className={styles.image}>
         <img src={imgContact} alt="actualite" />
       </div>

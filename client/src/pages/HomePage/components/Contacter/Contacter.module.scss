@@ -17,11 +17,7 @@
     top: 0;
     left: 0;
     z-index: 1; /* Set z-index to bring the image to the front */
-    // @include mixin.xs {
-    //   width: 100%;
-    //   height: 30%;
-    //   position: relative;
-    // }
+   
     img {
       width: 100%;
       height: 100%;
